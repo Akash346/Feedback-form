@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feedback Form</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://2-22-4-dot-lead-pages.appspot.com/static/lp918/min/jquery-1.9.1.min.js"></script>
+    <script src="https://2-22-4-dot-lead-pages.appspot.com/static/lp918/min/html5shiv.js"></script>
+</head>
+<body>
+<div id="sectionHomePage">
+    <header>
+        <h1 id="title" class="text-center">Feedback for Trainers</h1>
+        <p id="decription" class="text-center decription">Please fill out the form so we can improve our teaching 😊</p>
+    </header>
+    <form id="survey-form" method="POST" name="google-sheet" >
+        <div class="form-group">
+            <label for="name_and_surname">Student Name</label>
+            <input id="name_and_surname" type="text" name="name_and_surname" placeholder="Your answer" required class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="roll_number">Roll number</label>
+            <input id="roll_number" type="text" name="roll_number" placeholder="Your answer" required class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" type="text" name="email" placeholder="Your answer" required class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="department">Department</label>
+            <select name="department" id="department" class="form-control">
+                <option value="CSE">CSE</option>
+                <option value="CSE-AIML">CSE-AMIL</option>
+                <option value="IT">IT</option>
+                <option value="CS">CS</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <p class="pform">What was your session?</p>
+            <label><input type="radio" name="session" value="Aptitude" class="input-radio" />Aptitude</label>
+            <label><input type="radio" name="session" value="Verbal" class="input-radio" />Verbal</label>
+            <label><input type="radio" name="session" value="Technical" class="input-radio" />Technical</label>
+        </div>
+        <div class="form-group">
+            <label for="trainer">Which of the following Trainer came for the session?</label>
+            <select name="trainer" id="trainer" class="form-control">
+                <option value="Samatha">Samatha</option>
+                <option value="Niharika">Niharika</option>
+                <option value="Ajay">Ajay</option>
+                <option value="Jyoshitha">Jyoshitha</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <p class="pform">Were you able to understand the topic explained in the session?</p>
+            <label><input type="radio" name="understood" value="Yes" class="input-radio" />Yes</label>
+            <label><input type="radio" name="understood" value="No" class="input-radio" />No</label>
+        </div>
+        <div class="form-group">
+            <p class="pform">If your answer is NO for the previous question, kindly mention the reason?</p>
+            <textarea id="comments" name="comments" placeholder="Your answer" class="input-textarea"></textarea>
+        </div>
+        <div class="form-group">
+            <p class="pform">Kindly rate the explanation of the content dealt by the trainer in the class</p>
+            <label><input type="radio" name="rating" value="Poor" class="input-radio" />1.Poor</label>
+            <label><input type="radio" name="rating" value="Below Average" class="input-radio" />2.Below Average</label>
+            <label><input type="radio" name="rating" value="Average" class="input-radio" />3.Average</label>
+            <label><input type="radio" name="rating" value="Good" class="input-radio" />4.Good</label>
+            <label><input type="radio" name="rating" value="Excellent" class="input-radio" />5.Excellent</label>
+        </div>
+        <div class="form-group">
+            <button type="button" id="submit" class="submit-button" onclick="display('sectionThanksPage')">Submit</button>
+        </div>
+    </form>
+</div>
+
+<div id="sectionThanksPage" style="display: none;">
+	<div class="page">
+    <h1 class="site-header__title" data-lead-id="site-header-title">THANK YOU!</h1>
+	<img src="https://res.cloudinary.com/drjmed4hr/image/upload/v1709642263/Pngtree_green_check_mark_8873320_qbvce1.png" class="cloudimg">
+    <div class="main-content">
+        <p class="main-content__body" data-lead-id="main-content-body">
+            Thanks a bunch for filling that out. It means a lot to us, just like you
+            do! We really appreciate you giving us a moment of your time today.
+            Thanks for being you.
+        </p>
+    </div>
+    <footer class="site-footer" id="footer">
+        <p class="site-footer__fineprint" id="fineprint">Copyright ©2024 | All Rights Reserved</p>
+    </footer>
+    </div>
+</div>
+
+<script>
+    function display(sectionId) {
+        document.getElementById('sectionHomePage').style.display = 'none';
+        document.getElementById(sectionId).style.display = 'block';
+    }
+</script>
+
+<script type="text/javascript" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/js/ccbp-ui-kit.js"></script>
+</body>
+</html>
